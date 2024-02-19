@@ -1,13 +1,11 @@
 package main
 
-import (
-	"github.com/01-edu/z01"
-)
+import "piscine"
+
+// "github.com/01-edu/z01"
 
 func main() {
-	for i := 48; i <= 57; i++ {
-		z01.PrintRune(rune(i))
-	}
-
-	z01.PrintRune('\n')
+	piscine.IsNegative(1)
+	piscine.IsNegative(0)
+	piscine.IsNegative(-1)
 }
