@@ -1,7 +1,12 @@
 package main
 
-import "piscine"
+import (
+	"fmt"
+	"piscine"
+)
 
 func main() {
-	piscine.PrintComb()
+	fmt.Println(piscine.BasicAtoi("12345"))
+	fmt.Println(piscine.BasicAtoi("0000000012345"))
+	fmt.Println(piscine.BasicAtoi("000000"))
 }
