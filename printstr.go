@@ -1,8 +1,10 @@
 package piscine
 
-import "fmt"
+import "github.com/01-edu/z01"
 
 func PrintStr(s string) {
 	arr := []rune(s)
-	fmt.Print(string(arr))
+	for i := 0; i <= len(arr)-1; i++ {
+		z01.PrintRune(arr[i])
+	}
 }
