@@ -2,7 +2,7 @@ package piscine
 
 import "github.com/01-edu/z01"
 
-var(
+var (
 	ans [8]rune
 	ban [9]bool
 	ans2 [9]int
