@@ -32,10 +32,10 @@ func EightQueens() {
 		if ban[cur] == false {
 			put := true
 			for j := 1; j <= cnt; j++ {
-				if cur == ans2[j]-(cnt+1-j) || cur == ans2[j]+(cnt+1-j) {
-					put = false
-					break
-				} 
+					if cur == ans2[j]-(cnt+1-j) || cur == ans2[j]+(cnt+1-j) {
+						  put = false
+							break
+					} 
 			}
 			if put == true {
 				ban[cur] = true
