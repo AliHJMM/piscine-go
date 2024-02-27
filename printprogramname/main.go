@@ -8,9 +8,12 @@ import (
 
 func main() {
 	args := os.Args
+	slice := []rune(args[0])
 
-	for _, chr := range args[0] {
-		z01.PrintRune(chr)
+	for _, chr := range slice {
+		if chr != '.' && chr != '/' {
+			z01.PrintRune(chr)
+		}
 	}
 	z01.PrintRune('\n')
 }
