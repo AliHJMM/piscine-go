@@ -1,6 +1,10 @@
 package piscine
 
 func Atoi(s string) int {
+	if len(s) == 0 {
+		return 0
+	}
+
 	slice := []rune(s)
 	ans := 0
 	sign := 1
