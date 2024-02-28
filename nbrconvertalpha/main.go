@@ -6,57 +6,53 @@ import (
 	"github.com/01-edu/z01"
 )
 
-func Atoi(s string) int {
-	var noZero, negative int
-	for g, i := range s {
-		count := 0
-		if g == 0 && (i == '-' || i == '+') {
-			if i == '-' {
-				negative++
+func BasicAtoi(s string) int {
+	x := 0
+	for _, cifra := range s {
+		if '0' <= cifra && cifra <= '9' {
+			z := 0
+			for k := '1'; k <= cifra; k++ {
+				z++
 			}
-			continue
+			x = x*10 + z
+		} else {
+			x = -1
+			break
 		}
-		if i < '0' || i > '9' {
-			return 0
-		}
-		for j := '0'; j < i; j++ {
-			count++
-		}
-		noZero = noZero*10 + count
 	}
-
-	if negative == 1 {
-		return -noZero
-	} else {
-		return noZero
+	if (x != -1) && !(1 <= x && x <= 26) {
+		x = -1
 	}
+	return x
 }
 
 func main() {
-	funcArgs := os.Args
-	// finding the length of the Argument Array
-	var len int
-	for index := range funcArgs {
-		len = index + 1
+	arg := os.Args
+	pos := 1
+	flagupper := false
+	c := 0
+	for range arg {
+		c++
 	}
-
-	if len > 1 {
-		charCount := 96 // before 'a'
-		// checking for --upper flag
-		if os.Args[1] == "--upper" {
-			charCount = 64 // before 'A'; this is for capitalizing
-		}
-		for index, element := range funcArgs {
-			if index > 1 {
-				// if the element is in 'a'-'z' or 'A'-'Z' range
-				charNbr := Atoi(element) + charCount
-				if (charNbr >= 97 && charNbr <= 122) || (charNbr >= 65 && charNbr <= 90) {
-					z01.PrintRune(rune(charNbr))
+	if c >= 2 && arg[1] == "--upper" {
+		pos = 1
+		flagupper = true
+	}
+	for index, k := range arg {
+		if index >= pos {
+			num := BasicAtoi(k)
+			if num == -1 {
+				z01.PrintRune(' ')
+			} else {
+				if !flagupper {
+					z01.PrintRune(rune('a' + num - 1))
+					// z01.PrintRune(rune('a' + num -32))
 				} else {
-					z01.PrintRune(' ')
+					z01.PrintRune(rune('A' + num - 1))
+					// z01.PrintRune(rune('A' + num - 32))
 				}
 			}
 		}
 	}
-	z01.PrintRune('\n')
+	z01.PrintRune(10)
 }
