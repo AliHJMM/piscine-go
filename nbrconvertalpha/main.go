@@ -47,7 +47,7 @@ func main() {
 			charCount = 64 // before 'A'; this is for capitalizing
 		}
 		for index, element := range funcArgs {
-			if index > 0 {
+			if index > 1 {
 				// if the element is in 'a'-'z' or 'A'-'Z' range
 				charNbr := Atoi(element) + charCount
 				if (charNbr >= 97 && charNbr <= 122) || (charNbr >= 65 && charNbr <= 90) {
