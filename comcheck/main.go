@@ -7,7 +7,7 @@ import (
 
 func main() {
 	args := os.Args[1:]
-	for _,chr := range args {
+	for _, chr := range args {
 		if chr == "01" || chr == "galaxy" || chr == "galaxy 01" {
 			fmt.Print("Alert!!")
 		} else {
