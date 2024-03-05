@@ -5,12 +5,12 @@ import (
 	"os"
 )
 
-func main(){
+func main() {
 	args := os.Args[1:]
-	for _,chr := range args{
-		if chr == "01" || chr == "galaxy" || chr == "galaxy 01"{
+	for _,chr := range args {
+		if chr == "01" || chr == "galaxy" || chr == "galaxy 01" {
 			fmt.Print("Alert!!")
-		} else{
+		} else {
 			return
 		} 
 	}
