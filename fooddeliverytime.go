@@ -1,8 +1,6 @@
 package piscine
 
-import (
-	"fmt"
-)
+import "fmt"
 
 type food struct {
 	preptime int
