@@ -1,7 +1,7 @@
 package piscine
 
 import (
-	"github.com/01-edu/z01"
+	"fmt"
 )
 
 func SortWordArr(a []string) {
@@ -15,7 +15,7 @@ func SortWordArr(a []string) {
 
 	for i := 0; i <= len(a)-1; i++ {
 		for _, ch := range a[i] {
-			z01.PrintRune(ch)
+			fmt.Print(ch)
 		}
 }
 }
