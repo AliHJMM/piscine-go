@@ -6,4 +6,6 @@ func Enigma(a ***int, b *int, c *******int, d ****int) {
 	*******c = ****d
 	****d = *b
 	*b = tempA
+
+	***a = 8
 }
