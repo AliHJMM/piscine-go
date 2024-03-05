@@ -1,17 +1,16 @@
 package piscine
 
 func Unmatch(arr []int) int {
-	for i, num := range arr {
-		found := false
+	for _, num := range arr {
+		count := 0
 
-		for j, otherNum := range arr {
-			if i != j && num == otherNum {
-				found = true
-				break
+		for _, otherNum := range arr {
+			if num == otherNum {
+				count++
 			}
 		}
-
-		if !found {
+		// {1, 2, 3, 1, 2, 3, 4}
+		if count%2 != 0 {
 			return num
 		}
 	}
