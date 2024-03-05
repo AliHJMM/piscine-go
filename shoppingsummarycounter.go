@@ -10,7 +10,10 @@ func ShoppingSummaryCounter(str string) map[string]int {
 			wordStart = i
 		} else if wordStart != -1 && (isSpace || i == len(str)-1) {
 			if isSpace {
-				summary[str[wordStart:i]]++
+				word := str[wordStart:i]
+				if word != "" {
+					summary[word]++
+				}
 			} else {
 				summary[str[wordStart:]]++
 			}
