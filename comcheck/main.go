@@ -7,11 +7,15 @@ import (
 
 func main() {
 	args := os.Args[1:]
+	found := false
+
 	for _, chr := range args {
 		if chr == "01" || chr == "galaxy" || chr == "galaxy 01" {
-			fmt.Println("Alert!!!")
-		} else {
-			return
+			found = true
 		}
+	}
+
+	if found {
+		fmt.Println("Alert!!!")
 	}
 }
