@@ -1,6 +1,5 @@
 package piscine
 
-
 func LoafOfBread(str string) string {
 	if len(str) < 5 {
 		return "Invalid Output\n"
@@ -20,4 +19,3 @@ func LoafOfBread(str string) string {
 
 	return result + "\n"
 }
-
