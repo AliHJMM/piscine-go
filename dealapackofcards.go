@@ -1,6 +1,7 @@
 package piscine
 
 import "fmt"
+
 func DealAPackOfCards(deck []int) {
 	player := 1
 	for j := 0; j < 12; {
